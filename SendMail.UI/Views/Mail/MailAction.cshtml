@@ -1,0 +1,20 @@
+﻿
+@model SendMail.UI.DTO.MailDTO
+
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+
+
+<form asp-action="MailAction" method="post">
+    <div class="mb-3">
+        <label asp-for="mailAdres" class="form-label">Email address</label>
+        <input asp-for="mailAdres" class="form-control" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+        <label asp-for="TextArea" class="form-label">Example textarea</label>
+        <textarea asp-for="TextArea" class="form-control" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
